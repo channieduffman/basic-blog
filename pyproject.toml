@@ -1,0 +1,11 @@
+[project]
+name = "basicb"
+version = "1.0.0"
+description = "The Flask tutorial blog to be used as a development playground."
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
