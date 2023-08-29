@@ -73,7 +73,7 @@ def test_update(client, auth, app):
 
 
 @pytest.mark.parametrize('path', (
-    '/create',
+    '/create/',
     '/1/update',
 ))
 def test_create_update_validate(client, auth, path):
