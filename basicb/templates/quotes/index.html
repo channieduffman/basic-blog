@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Quotes{% endblock %}
+
+{% block content %}
+
+    <h1>Zen Quotes API</h1>
+    <h4>{{ curr_t }}</h4>
+
+    <p>{{ quotes[0]['q'] }}</p>
+
+{% endblock %}

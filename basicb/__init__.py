@@ -30,7 +30,7 @@ def create_app(test_config=None):
     @app.route('/hello')
     def hello():
         return 'Hello, world!'
-    
+
     from . import db
     db.init_app(app)
 
@@ -40,5 +40,8 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
+
+    from . import quotes
+    app.register_blueprint(quotes.bp)
     
     return app
