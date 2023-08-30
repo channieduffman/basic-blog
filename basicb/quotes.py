@@ -8,16 +8,11 @@ import time
 import urllib.request, json
 import ssl
 
-# For timed calls to get_quotes()
-from basicb.models import tl
-from datetime import timedelta
-
 from basicb.auth import login_required
 
 bp = Blueprint('quotes', __name__)
 
 
-@tl.job(interval=timedelta(seconds=10))
 def get_quotes():
     # Fetch the ZenQuotes API
     url = "https://zenquotes.io/api/quotes"
